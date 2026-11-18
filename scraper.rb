@@ -20,6 +20,8 @@ module OpenURI
   end
 end
 
+Faraday.default_connection = Faraday.new(options = {:headers=>{:user_agent=>USER_AGENT}})
+
 pages = [
   'Category:Members of the Scottish Parliament 1999–2003',
   'Category:Members of the Scottish Parliament 2003–07',
